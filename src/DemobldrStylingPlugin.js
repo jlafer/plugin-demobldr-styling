@@ -8,7 +8,7 @@ export default class DemobldrStylingPlugin extends FlexPlugin {
   }
 
   init(flex, manager) {
-    flex.MainHeader.defaultProps
-    .logoUrl = "https://www.mercuryinsurance.com/assets/images/mi-logo-web.svg";
+    const { REACT_APP_LOGO_URL } = process.env;
+    flex.MainHeader.defaultProps.logoUrl = REACT_APP_LOGO_URL;
   }
 }
